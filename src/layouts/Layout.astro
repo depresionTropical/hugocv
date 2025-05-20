@@ -1,25 +1,17 @@
 ---
-export interface Props {
-  title: string;
-}
-
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content="CV de Victor H. Martínez González" />
-    <link rel="icon" href="/favicon.ico" />
-    <!-- Importa el CSS global con Tailwind -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
-  </head>
-  <body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex flex-col items-center justify-start p-4">
-      <slot />
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <slot />
+</body>
 </html>
