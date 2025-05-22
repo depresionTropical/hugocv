@@ -1,17 +1,22 @@
 ---
+import "../styles/global.css"; // ajusta si está en otro lado
 const { title } = Astro.props;
 ---
 
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title}</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  
-  <link rel="stylesheet" href="/src/styles/global.css" />
-</head>
-<body>
-  <slot />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/hugocv/">
+    <meta name="description" content="Curriculum Vitae de Hugo Martínez" />
+    <meta name="author" content="Victor H. Martínez González" />
+    <meta name="keywords" content="Curriculum Vitae, CV, Hugo Martínez, AI, Full Stack Developer, Data Scientist" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" href="/hugocv/favicon.ico" type="image/x-icon" />
+     <link rel="stylesheet" href="/hugocv/styles/global.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
