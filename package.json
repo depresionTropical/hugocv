@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "astro build && gh-pages -d dist"
+    "deploy": "astro build && gh-pages -d dist",
+    "deploy:clean": "rm -rf dist && astro build && serve dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
